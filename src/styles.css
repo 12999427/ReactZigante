@@ -1,90 +1,124 @@
 * {
-box-sizing: border-box;
-}
-
-body {
-font-family: sans-serif;
-margin: 20px;
-padding: 0;
-}
-
-h1 {
-margin-top: 0;
-font-size: 22px;
-}
-
-h2 {
-margin-top: 0;
-font-size: 20px;
-}
-
-h3 {
-margin-top: 0;
-font-size: 18px;
-}
-
-h4 {
-margin-top: 0;
-font-size: 16px;
-}
-
-h5 {
-margin-top: 0;
-font-size: 14px;
-}
-
-h6 {
-margin-top: 0;
-font-size: 12px;
-}
-
-code {
-font-size: 1.2em;
-}
-
-ul {
-padding-inline-start: 20px;
-}
-
-* {
-box-sizing: border-box;
-}
-
-body {
-font-family: sans-serif;
-margin: 20px;
-padding: 0;
-}
-
-.square {
-background: #fff;
-border: 1px solid #999;
-float: left;
-font-size: 24px;
-font-weight: bold;
-line-height: 34px;
-height: 34px;
-margin-right: -1px;
-margin-top: -1px;
-padding: 0;
-text-align: center;
-width: 34px;
-}
-
-.board-row:after {
-clear: both;
-content: '';
-display: table;
-}
-
-.status {
-margin-bottom: 10px;
-}
-.game {
-display: flex;
-flex-direction: row;
-}
-
-.game-info {
-margin-left: 20px;
-}
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 40px;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    font-weight: 600;
+  }
+  
+  h1 {
+    font-size: 28px;
+    color: #2c3e50;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #34495e;
+  }
+  
+  h3 {
+    font-size: 20px;
+    color: #7f8c8d;
+  }
+  
+  h4 {
+    font-size: 18px;
+    color: #95a5a6;
+  }
+  
+  h5 {
+    font-size: 16px;
+    color: #bdc3c7;
+  }
+  
+  h6 {
+    font-size: 14px;
+    color: #ecf0f1;
+  }
+  
+  code {
+    font-size: 1.2em;
+    font-family: 'Courier New', monospace;
+    background-color: #f7f7f7;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  
+  ul {
+    padding-inline-start: 30px;
+    margin-top: 10px;
+  }
+  
+  .square {
+    background: #fff;
+    border: 1px solid #bdc3c7;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 40px; /* aumento della dimensione */
+    margin-right: 5px; /* margine più largo tra le caselle */
+    margin-top: 5px; /* margine più ampio per un effetto visivo più rilassato */
+    padding: 0;
+    text-align: center;
+    width: 40px;
+    border-radius: 4px; /* angoli arrotondati */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* aggiunta di ombra */
+    transition: all 0.3s ease; /* effetto di transizione */
+  }
+  
+  .square:hover {
+    background-color: #eaf2f8; /* colore di sfondo al passaggio del mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ombra più grande */
+  }
+  
+  .board-row:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+  
+  .status {
+    margin-bottom: 20px; /* spaziatura maggiore tra il contenuto */
+    font-size: 18px;
+    color: #2980b9;
+  }
+  
+  .game {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* aggiunto spazio tra le sezioni del gioco */
+    margin-top: 20px;
+  }
+  
+  .game-info {
+    margin-left: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .history {
+    background-color: #2980b9;
+    border: none;
+    color: rgb(221, 221, 221);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+  }

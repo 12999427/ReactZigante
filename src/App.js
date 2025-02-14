@@ -79,12 +79,15 @@ function Game() {
     }
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button className="history" onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
 
-  return (
+  return (<>
+    <div className="titlediv" style= {{display: "flex", justifyContent: "center"}}>
+      <h1 className="title">Tic Tac Toe</h1>
+    </div>
     <div className="game">
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
@@ -93,6 +96,7 @@ function Game() {
         <ol>{moves}</ol>
       </div>
     </div>
+    </>
   );
 }
 
